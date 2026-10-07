@@ -1,0 +1,20 @@
+IP            CP   MAC
+192.168.0.80  pc1  D8:BB:C1:C2:A6:C8 done 
+192.168.0.121 pc2  D8:BB:C1:C2:A6:2F done
+
+192.168.0.212 pc3  D8:BB:C1:C2:A7:3A done
+192.168.0.192 pc4  D8:BB:C1:C2:A5:C6
+
+
+192.168.0.22  pc5  D8:BB:C1:C2:A6:C8 done
+192.168.0.21  pc6  FC:4D:D4:D4:09:4F done
+
+192.168.0.68  pc7  FC:4D:D4:D4:3D:FA done
+192.168.0.88  pc8  44:37:E6:D7:7F:9A done
+
+
+sudo nvim  /etc/nixos/configuration.nix 
+services.flatpak.enable = true;
+sudo nixos-rebuild switch 
+
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo ; sudo flatpak install flathub edu.mit.Scratch -y 
